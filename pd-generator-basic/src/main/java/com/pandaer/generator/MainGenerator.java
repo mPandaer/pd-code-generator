@@ -24,7 +24,8 @@ public class MainGenerator {
 
     private static void generatorDynamicFile(String baseOutputPath, AcmTemplateConfig model) {
         // 生成动态文件
-        String dynamicFilePath = Main.class.getResource("/templates/AcmTemplate.java.ftl").getFile();
+        String basePath = System.getProperty("user.dir");
+        String dynamicFilePath = new File(basePath,"pd-generator-basic/src/main/resources/templates/AcmTemplate.java.ftl").toString();
         String outPath = new File(baseOutputPath, "acm-template/src/main/java/com/pandaer/AcmTemplate.java").toString();
         try {
             DynamicGenerator.generator(dynamicFilePath, outPath, model);

@@ -1,0 +1,1 @@
+java -jar pd-generator-basic/target/pd-generator-basic-1.0-SNAPSHOT-jar-with-dependencies.jar "$@"
