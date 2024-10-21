@@ -1,4 +1,4 @@
-package com.pandaer.cli.command;
+package ${basePackage}.cli.command;
 
 
 import cn.hutool.core.io.FileUtil;
@@ -13,7 +13,7 @@ public class ListCommand implements Runnable {
 
     @Override
     public void run() {
-        String projectPath = "/Users/yupi/Code/yuzi-generator/yuzi-generator-demo-projects/acm-template-pro";
+        String projectPath = "${fileConfig.inputRootPath}";
         List<File> files = FileUtil.loopFiles(projectPath);
         for (File file : files) {
             System.out.printf("文件名: %s\n", file.getName());

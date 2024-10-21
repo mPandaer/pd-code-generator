@@ -1,11 +1,13 @@
-package com.pandaer.generator;
+package com.pandaer.marker.generator.file;
 
-import com.pandaer.model.DataModel;
+import com.pandaer.marker.model.DataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
@@ -17,7 +19,7 @@ import java.nio.file.Files;
  */
 public class DynamicGenerator {
 
-    public static void generator(String dynamicFilePath, String outPath, DataModel model) throws IOException, TemplateException {
+    public static void generator(String dynamicFilePath, String outPath, Object model) throws IOException, TemplateException {
         // 设置FreeMarker的配置
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_33);
         File dynamicFile = new File(dynamicFilePath);
@@ -30,6 +32,7 @@ public class DynamicGenerator {
         if (file.exists()) {
             file.delete();
         }
+//        template.process(model,(System.out));
         OutputStreamWriter out = new OutputStreamWriter(Files.newOutputStream(file.toPath()), StandardCharsets.UTF_8);
         template.process(model,out);
         out.close();

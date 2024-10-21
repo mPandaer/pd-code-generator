@@ -2,7 +2,7 @@ package com.pandaer.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.pandaer.generator.MainGenerator;
-import com.pandaer.model.AcmTemplateConfig;
+import com.pandaer.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine;
 
@@ -28,7 +28,7 @@ public class GeneratorCommand implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        AcmTemplateConfig model = BeanUtil.toBean(this, AcmTemplateConfig.class);
+        DataModel model = BeanUtil.toBean(this, DataModel.class);
         MainGenerator.generator(model);
         return 0;
     }

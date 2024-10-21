@@ -1,9 +1,9 @@
-package com.pandaer.cli;
+package ${basePackage}.cli;
 
-import com.pandaer.cli.command.ConfigCommand;
-import com.pandaer.cli.command.GeneratorCommand;
-import com.pandaer.cli.command.ListCommand;
-import com.pandaer.cli.command.MainCommand;
+import ${basePackage}.cli.command.ConfigCommand;
+import ${basePackage}.cli.command.GeneratorCommand;
+import ${basePackage}.cli.command.ListCommand;
+import ${basePackage}.cli.command.MainCommand;
 import picocli.CommandLine;
 
 import java.util.Arrays;

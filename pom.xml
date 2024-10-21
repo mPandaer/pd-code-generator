@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>generator-demo/acm-template</module>
         <module>pd-generator-basic</module>
+        <module>pd-generator-maker</module>
     </modules>
 
     <properties>

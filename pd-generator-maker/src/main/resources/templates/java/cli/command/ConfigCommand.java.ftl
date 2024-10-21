@@ -1,14 +1,14 @@
-package com.pandaer.cli.command;
+package ${basePackage}.cli.command;
 
 import cn.hutool.core.util.ReflectUtil;
-import com.pandaer.model.DataModel;
+import ${basePackage}.model.DataModel;
 import picocli.CommandLine;
 
 import java.lang.reflect.Field;
 
 @CommandLine.Command(name = "GeneratorCode", version = "1.0", mixinStandardHelpOptions = true)
 public class ConfigCommand implements Runnable {
-
+    
     @Override
     public void run() {
         Field[] fields = ReflectUtil.getFields(DataModel.class);

@@ -1,6 +1,6 @@
-package com.pandaer.generator;
+package ${basePackage}.generator;
 
-import com.pandaer.model.DataModel;
+import ${basePackage}.model.DataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
